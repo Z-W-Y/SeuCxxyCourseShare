@@ -1,0 +1,48 @@
+##1
+s1 = set(input())
+s2 = set()
+
+for i in s1:
+    s2.add(int(i))
+
+print(sum(s2))
+
+##2
+
+dict1 = {"张三": 11, "李四": 22, "王五": 332}
+
+print(dict1.keys())
+
+print(dict1['李四'])
+
+
+##3
+
+fruits = {'apple': 10, 'mango': 12, 'durian': 20, 'banana': 5}
+
+l1 = list(fruits.keys())
+l2 = list(fruits.values())
+
+i = l2.index(max(l2))
+
+print({l1[i]: l2[i]})
+
+
+## 4
+dict1 = {'张三凤': ['北京', '成都'], '李茉绸': ['上海', '广州', '兰州'],
+         '慕容福': ['太原', '济南', '上海', '西安']}
+
+for i in dict1.items():
+    print(f"{i[0]}去过{len(i[1])}个城市")
+
+cnt = 0
+list1 = []
+for i in dict1.items():
+    if ("上海" in i[1]):
+        cnt += 1
+        list1.append(i[0])
+
+print(f"去过上海的有{cnt}人，他们是", end="")
+for i in list1:
+    print(f"{i}", end=" ")
+

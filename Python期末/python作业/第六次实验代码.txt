@@ -1,0 +1,76 @@
+## 1
+def func(num):
+    newstr = ''.join(reversed(num))
+
+    return (len(newstr), int(newstr))
+
+
+num = input("请输入一个不超过 5 位的正整数：")
+print(func(num))
+
+
+## 2
+import random
+
+
+def func():
+    list1 = []
+    for i in range(50):
+        list1.append(random.randint(40, 100))
+    list1.sort(reverse=True)
+    print(sum(list1) / 50)
+    print(f"最高：{list1[0]}")
+    print(f"最低：{list1[49]}")
+    print(list1)
+
+
+func()
+
+## 3
+import random
+
+random.seed(17)
+
+N = int(input("请输入整数："))
+
+low = eval("1" + "0" * (N - 1))
+high = eval("1" + "0" * N)
+
+for i in range(0, 3):
+    print(random.randint(low, high - 1))
+
+## 4
+def func(num):
+    l1 = list(str(num))
+    l2 = []
+    for i in l1:
+        l2.append(int(i))
+    return tuple(l2)
+
+
+num = int(input("请输入整数："))
+print(func(num))
+
+
+## 5
+
+list1 = []
+
+
+while True:
+    n = int(input("请输入不超过 2 位的正整数，用-1结束："))
+    if n == -1:
+        break
+    if (n < 10):
+        temp = n * n
+        if n == temp % 10:
+            list1.append(n)
+    else:
+        temp = n * n
+        first = temp % 10
+        second = int(temp % 100 / 10)
+        if second and n == eval(str(second) + str(first)):
+            list1.append(n)
+
+print(list1)
+

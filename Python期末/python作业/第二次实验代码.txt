@@ -1,0 +1,31 @@
+## 3
+num = input("请输入一个三位整数")
+
+newstr = ''.join(reversed(num))
+
+print(int(newstr))
+
+
+## 4
+list = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+num = int(input())
+
+print(list[num - 1])
+
+
+## 5
+import re
+
+message = input()
+
+phone = "0[0-9]{2,3}-[0-9]{7,8}"
+
+post = "[0-8][0-7]\d{4}"
+
+res1 = re.search(phone, message)
+res2 = re.search(post, message)
+
+print(res1.group())
+print(res2.group())

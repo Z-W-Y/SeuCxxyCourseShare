@@ -1,0 +1,46 @@
+## t1
+import random
+
+random.seed(10)
+
+lista = []
+for i in range(1, 11):
+    lista.append(random.randint(0, 100))
+print(lista)
+
+## t2
+import random
+
+lista = []
+for i in range(1, 21):
+    lista.append(random.randint(0, 100))
+
+pre = sorted(lista[0: 10])
+post = sorted(lista[10: 20], reverse=True)
+tup1 = (pre + post)
+
+print(tup1)
+
+## t3
+lista = []
+
+n = int(input("请输入数字个数"))
+for i in range(0, n):
+    lista.append(int(input()))
+
+print(sum(lista) / n)
+
+## t4
+import random
+
+lst_who = ['小马', '小羊', '小鹿']
+lst_where = ['草地上', '电影院', '家里']
+lst_what = ['看电影', '听故事', '吃晚饭']
+
+a = random.randint(0, 2)
+b = random.randint(0, 2)
+c = random.randint(0, 2)
+
+print(f"{lst_who[a]}在{lst_where[b]}{lst_what[c]}")
+
+
